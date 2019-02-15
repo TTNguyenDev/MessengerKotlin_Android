@@ -5,19 +5,21 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity" android:background="@android:color/holo_green_light">
+        tools:context=".RegisterActivity" android:background="@android:color/holo_green_light">
 
     <EditText
             android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_height="48dp"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/username_editText_register"
             android:paddingLeft="16dp"
-            android:background="@android:color/white" android:layout_marginEnd="16dp"
+            android:background="@drawable/rounded_edittext" android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="16dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="32dp"
-            app:layout_constraintTop_toTopOf="parent" android:hint="Username" android:autofillHints=""/>
+            app:layout_constraintStart_toStartOf="parent"
+            android:hint="Username" android:autofillHints=""
+            app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/imagePicker"/>
     <EditText
             android:layout_width="0dp"
             android:layout_height="50dp"
@@ -25,7 +27,7 @@
             android:ems="10"
             android:id="@+id/email_editText_register"
             android:paddingLeft="16dp"
-            android:background="@android:color/white" android:hint="Email" android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_edittext" android:hint="Email" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/username_editText_register"
             app:layout_constraintEnd_toEndOf="@+id/username_editText_register"
             app:layout_constraintStart_toStartOf="@+id/username_editText_register" android:text="trietnguyen"/>
@@ -36,7 +38,7 @@
             android:ems="10"
             android:id="@+id/password_editText_register"
             android:paddingLeft="16dp"
-            android:background="@android:color/white" android:hint="password" android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_edittext" android:hint="password" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/email_editText_register"
             app:layout_constraintEnd_toEndOf="@+id/email_editText_register"
             app:layout_constraintStart_toStartOf="@+id/email_editText_register" android:text="xinloiem"/>
@@ -44,6 +46,8 @@
             android:text="Register"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:textColor="@android:color/white"
             android:id="@+id/sigup_button_register" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/password_editText_register"
             app:layout_constraintEnd_toEndOf="@+id/password_editText_register"
@@ -58,4 +62,15 @@
             app:layout_constraintTop_toBottomOf="@+id/sigup_button_register"
             app:layout_constraintEnd_toEndOf="@+id/sigup_button_register"
             app:layout_constraintStart_toStartOf="@+id/sigup_button_register"/>
+    <Button
+            android:text="Select photo"
+            android:textColor="@android:color/white"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/imagePicker"
+            android:background="@drawable/rounded_imagepicture"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/username_editText_register"
+            app:layout_constraintEnd_toEndOf="@+id/username_editText_register"/>
 </android.support.constraint.ConstraintLayout>
